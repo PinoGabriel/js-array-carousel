@@ -20,3 +20,17 @@ btnUp.addEventListener("click", function() {
     }
     
 })
+
+let btnDown = document.getElementById("btnDown")
+
+btnDown.addEventListener("click", function() {
+    console.log("indetro");
+    console.log(currentImg-1)
+
+    if (currentImg > 0) {
+        images[currentImg].classList.remove("my_display");
+        currentImg--;
+        images[currentImg].classList.add("my_display");
+    }
+    
+})
