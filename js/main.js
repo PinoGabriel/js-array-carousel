@@ -17,6 +17,11 @@ btnUp.addEventListener("click", function() {
         currentImg++;
         images[currentImg].classList.add("my_display");
         console.log(images[currentImg])
+    } else {
+        images[currentImg].classList.remove("my_display");
+        currentImg = 0;
+        images[currentImg].classList.add("my_display");
+        console.log(images[currentImg]);
     }
     
 })
@@ -31,6 +36,12 @@ btnDown.addEventListener("click", function() {
         images[currentImg].classList.remove("my_display");
         currentImg--;
         images[currentImg].classList.add("my_display");
+    } else {
+        images[currentImg].classList.remove("my_display");
+        currentImg = images.length - 1;
+        images[currentImg].classList.add("my_display");
     }
     
 })
+
+
