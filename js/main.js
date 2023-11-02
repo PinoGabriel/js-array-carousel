@@ -1,11 +1,27 @@
 
 
-let images = document.querySelectorAll("img")
+
+let imageList = [
+    "./img/01.webp",
+    "./img/02.webp",
+    "./img/03.webp",
+    "./img/04.webp",
+    "./img/05.webp"
+]
+let everyImage = ""
+
+for (let i = 0; i < imageList.length; i++) {
+    const element = imageList[i];
+    everyImage += `<img src="${element}">` 
+}
+document.getElementById("myImages").innerHTML += everyImage
+
+
+let images = document.querySelectorAll("#myImages img")
 console.log(images.length);
 let btnUp = document.getElementById("btnUp")
 let currentImg = 0
-images[currentImg];
-console.log(images[currentImg]);
+images[currentImg].classList.add("my_display")
 
 btnUp.addEventListener("click", function() {
     console.log("avanti");
@@ -43,5 +59,3 @@ btnDown.addEventListener("click", function() {
     }
     
 })
-
-
